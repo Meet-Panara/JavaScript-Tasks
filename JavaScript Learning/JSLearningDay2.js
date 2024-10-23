@@ -180,3 +180,16 @@ const func1 = () => {
 }
 
 func1();
+
+
+async function print(){
+    const func2 = () => {
+        setTimeout(() => {
+            console.log("Function 2 is called");
+        }, 2000);
+    }
+    
+    console.log("called func 1");
+    await func2();
+    console.log("function 1 ends");
+}
